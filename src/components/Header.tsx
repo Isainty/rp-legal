@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Scale, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Scale, Phone, Mail, ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,8 +15,15 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
+  ];
+
+  const services = [
+    { name: 'Corporate Law', href: '/services/corporate-law' },
+    { name: 'Civil Defense', href: '/services/civil-defense' },
+    { name: 'Criminal Defense', href: '/services/criminal-defense' },
+    { name: 'Family Law', href: '/services/family-law' },
+    { name: 'Real Estate Law', href: '/services/real-estate-law' },
   ];
 
   return (
@@ -38,6 +52,24 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                {services.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <Link to={service.href} className="cursor-pointer">
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Button variant="hero" size="sm" className="ml-4">
               Get Consultation
             </Button>
@@ -66,6 +98,19 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+              <div className="border-t border-border pt-4">
+                <span className="text-sm font-medium text-muted-foreground">Services</span>
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
               <Button variant="hero" size="sm" className="w-full mt-4">
                 Get Consultation
               </Button>

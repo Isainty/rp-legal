@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { 
   Building2, 
   Shield, 
@@ -120,13 +121,15 @@ const Services = () => {
                 ))}
               </div>
 
-              <Button 
-                variant="professional" 
-                className="w-full group"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <Button 
+                  variant="professional" 
+                  className="w-full group"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
