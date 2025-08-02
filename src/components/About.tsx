@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Building, Target, Heart, Shield, CheckCircle } from 'lucide-react';
 
 const About = () => {
@@ -66,9 +67,39 @@ const About = () => {
                 service while adapting to the evolving legal landscape.
               </p>
 
-              <Button variant="outline" size="lg" className="mt-6">
-                Learn More About Our Firm
-              </Button>
+              {/* Gallery Section */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-foreground mb-6">Our Firm Gallery</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="relative overflow-hidden rounded-lg shadow-md group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=200&fit=crop" 
+                      alt="Modern Office"
+                      className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="relative overflow-hidden rounded-lg shadow-md group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=200&fit=crop" 
+                      alt="Legal Research"
+                      className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="relative overflow-hidden rounded-lg shadow-md group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=200&fit=crop" 
+                      alt="Team Meeting"
+                      className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Link to="/our-team">
+                <Button variant="outline" size="lg" className="mt-6">
+                  Learn More About Our Firm
+                </Button>
+              </Link>
             </div>
 
             {/* Timeline */}

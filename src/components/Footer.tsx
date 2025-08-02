@@ -44,13 +44,13 @@ const Footer = () => {
               </p>
 
               <div className="space-y-3">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 hover:text-secondary transition-colors">
                   <Phone className="w-5 h-5 text-secondary" />
-                  <span>+91-9876543210</span>
+                  <a href="tel:+919876543210">+91-9876543210</a>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 hover:text-secondary transition-colors">
                   <Mail className="w-5 h-5 text-secondary" />
-                  <span>info@rplegalassociates.com</span>
+                  <a href="mailto:info@rplegalassociates.com">info@rplegalassociates.com</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-secondary" />
@@ -96,9 +96,11 @@ const Footer = () => {
 
               <div className="mt-8">
                 <h5 className="font-semibold mb-4">Emergency Legal Help?</h5>
-                <Button variant="secondary" size="sm" className="w-full">
-                  Call Now: +91-9876543210
-                </Button>
+                <a href="tel:+919876543210" className="block">
+                  <Button variant="secondary" size="sm" className="w-full">
+                    Call Now: +91-9876543210
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

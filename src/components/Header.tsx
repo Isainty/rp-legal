@@ -15,6 +15,7 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Our Team', href: '/our-team' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -31,26 +32,41 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <Scale className="w-6 h-6 text-white" />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-lg overflow-hidden">
+              <img 
+                src="/src/assets/rp-logo.png" 
+                alt="RP Legal Associates" 
+                className="w-full h-full object-contain filter brightness-0 invert"
+                style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(1649%) hue-rotate(211deg) brightness(94%) contrast(93%)' }}
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">RP Legal Associates</h1>
               <p className="text-xs text-muted-foreground">Excellence in Legal Practice</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
             
             {/* Services Dropdown */}
@@ -89,14 +105,25 @@ const Header = () => {
           <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-elegant">
             <nav className="flex flex-col space-y-4 p-4">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="border-t border-border pt-4">
                 <span className="text-sm font-medium text-muted-foreground">Services</span>
@@ -126,11 +153,11 @@ const Header = () => {
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+91-9876543210</span>
+                <a href="tel:+919876543210" className="hover:underline">+91-9876543210</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@rplegalassociates.com</span>
+                <a href="mailto:info@rplegalassociates.com" className="hover:underline">info@rplegalassociates.com</a>
               </div>
             </div>
             <div className="text-xs">

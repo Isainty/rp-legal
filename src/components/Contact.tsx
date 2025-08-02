@@ -99,7 +99,17 @@ const Contact = () => {
                       <h4 className="font-semibold text-foreground">{info.title}</h4>
                     </div>
                   </div>
-                  <p className="font-medium text-foreground mb-1">{info.content}</p>
+                  {info.icon === Phone ? (
+                    <a href={`tel:${info.content.replace(/[^0-9+]/g, '')}`} className="font-medium text-foreground mb-1 hover:text-primary transition-colors">
+                      {info.content}
+                    </a>
+                  ) : info.icon === Mail ? (
+                    <a href={`mailto:${info.content}`} className="font-medium text-foreground mb-1 hover:text-primary transition-colors">
+                      {info.content}
+                    </a>
+                  ) : (
+                    <p className="font-medium text-foreground mb-1">{info.content}</p>
+                  )}
                   <p className="text-sm text-muted-foreground">{info.description}</p>
                 </div>
               ))}

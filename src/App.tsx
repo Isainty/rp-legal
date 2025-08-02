@@ -10,6 +10,7 @@ import CivilDefense from "./pages/services/CivilDefense";
 import CriminalDefense from "./pages/services/CriminalDefense";
 import FamilyLaw from "./pages/services/FamilyLaw";
 import RealEstateLaw from "./pages/services/RealEstateLaw";
+import OurTeam from "./pages/OurTeam";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/services/criminal-defense" element={<CriminalDefense />} />
           <Route path="/services/family-law" element={<FamilyLaw />} />
           <Route path="/services/real-estate-law" element={<RealEstateLaw />} />
+          <Route path="/our-team" element={<OurTeam />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

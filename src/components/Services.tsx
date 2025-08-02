@@ -1,77 +1,69 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { 
-  Building2, 
-  Shield, 
-  Gavel, 
-  Heart, 
-  Home, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { Building2, Shield, Heart, Home, Scale, Briefcase, FileText, Lightbulb, Users } from 'lucide-react';
 
 const Services = () => {
-  const services = [
+  const businessLawServices = [
     {
-      icon: Building2,
       title: 'Corporate Law',
-      description: 'Entity formation, contracts, M&A, and corporate governance solutions for businesses of all sizes.',
-      features: [
-        'Entity Formation & Registration',
-        'Contract Drafting & Review',
-        'Mergers & Acquisitions',
-        'Corporate Governance'
-      ],
-      color: 'primary'
+      description: 'Entity formation, M&A, compliance, and corporate governance.',
+      icon: Building2,
+      link: '/services/corporate-law'
     },
     {
-      icon: Shield,
-      title: 'Civil Defense',
-      description: 'Expert representation in complex civil disputes with proven track record of success.',
-      features: [
-        'Commercial Litigation',
-        'Contract Disputes',
-        'Property Disputes',
-        'Personal Injury Cases'
-      ],
-      color: 'secondary'
+      title: 'Contract Law',
+      description: 'Drafting, review, and dispute resolution for commercial contracts.',
+      icon: FileText,
+      link: '/services/corporate-law'
     },
     {
-      icon: Gavel,
+      title: 'Intellectual Property',
+      description: 'Patent, trademark, copyright protection and enforcement.',
+      icon: Lightbulb,
+      link: '/services/corporate-law'
+    }
+  ];
+
+  const litigationServices = [
+    {
       title: 'Criminal Defense',
-      description: 'Aggressive defense for white collar crimes and general criminal matters.',
-      features: [
-        'White Collar Crime',
-        'Financial Fraud',
-        'Regulatory Violations',
-        'General Criminal Defense'
-      ],
-      color: 'primary'
+      description: 'Expert representation in criminal matters and bail applications.',
+      icon: Shield,
+      link: '/services/criminal-defense'
     },
     {
-      icon: Heart,
+      title: 'Civil Defense',
+      description: 'Commercial disputes, property litigation, and civil matters.',
+      icon: Scale,
+      link: '/services/civil-defense'
+    },
+    {
+      title: 'Consumer Protection',
+      description: 'Consumer forum representation and product liability cases.',
+      icon: Users,
+      link: '/services/civil-defense'
+    }
+  ];
+
+  const personalLawServices = [
+    {
       title: 'Family Law',
-      description: 'Compassionate legal guidance for sensitive family matters and domestic relations.',
-      features: [
-        'Divorce & Separation',
-        'Child Custody',
-        'Domestic Violence',
-        'Adoption Proceedings'
-      ],
-      color: 'secondary'
+      description: 'Divorce, custody, matrimonial disputes, and family matters.',
+      icon: Heart,
+      link: '/services/family-law'
     },
     {
-      icon: Home,
       title: 'Real Estate Law',
-      description: 'Complete real estate legal services for residential and commercial properties.',
-      features: [
-        'Property Transactions',
-        'Title Verification',
-        'Zoning & Planning',
-        'Construction Law'
-      ],
-      color: 'primary'
+      description: 'Property transactions, title verification, and real estate disputes.',
+      icon: Home,
+      link: '/services/real-estate-law'
+    },
+    {
+      title: 'Employment Law',
+      description: 'Workplace disputes, labor law, and employment contracts.',
+      icon: Briefcase,
+      link: '/services/family-law'
     }
   ];
 
@@ -87,54 +79,85 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-glow transition-all duration-300 group hover:-translate-y-2"
-            >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className={`w-16 h-16 rounded-xl flex items-center justify-center ${
-                  service.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                }`}>
-                  <service.icon className={`w-8 h-8 ${
-                    service.color === 'primary' ? 'text-primary' : 'text-secondary'
-                  }`} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+        {/* Business Law Services */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Business & Corporate Law</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {businessLawServices.map((service, index) => (
+              <Link 
+                key={index} 
+                to={service.link}
+                className="group block"
+              >
+                <div className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-glow transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                    <service.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-              </div>
-
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                <Button 
-                  variant="professional" 
-                  className="w-full group"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
               </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="text-center mt-12">
+        {/* Litigation Services */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Litigation & Defense</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {litigationServices.map((service, index) => (
+              <Link 
+                key={index} 
+                to={service.link}
+                className="group block"
+              >
+                <div className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-glow transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                    <service.icon className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-secondary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Personal Law Services */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Personal & Family Law</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {personalLawServices.map((service, index) => (
+              <Link 
+                key={index} 
+                to={service.link}
+                className="group block"
+              >
+                <div className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-glow transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                    <service.icon className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
           <Button variant="hero" size="lg">
             View All Services
           </Button>
