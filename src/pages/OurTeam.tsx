@@ -10,10 +10,10 @@ const OurTeam = () => {
       designation: 'Founder & Senior Associate',
       experience: '12+ Years Experience,
       specialization: 'Member of ILI New Delhi',
-      image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/rajeshpatel',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
       twitter: 'https://twitter.com/rajeshpatel',
-      email: 'rajesh@rplegalassociates.com',
+      email: 'ratan@rplegalassociates.com',
       bio: 'As the visionary founder of RP Legal Associates, Mr. Ratan Prasad has built the firm from the ground up since 2012. His extensive experience and strategic leadership have been instrumental in establishing our reputation as a trusted legal partner across India.'
     },
     {
@@ -21,10 +21,10 @@ const OurTeam = () => {
       designation: 'Founder & Associate',
       experience: '7+ Years Experience',
       specialization: 'Member AWFTC of High Court, Ranchi',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/priyasharma',
-      twitter: 'https://twitter.com/priyasharma',
-      email: 'priya@rplegalassociates.com',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+      email: 'ranjit@rplegalassociates.com',
       bio: 'With his unique combination of legal and technical expertise, Mr. Ranjit Prasad brings invaluable insights to complex cases involving technology, intellectual property, and corporate matters. His diverse educational background enables comprehensive legal solutions.'
     },
     {
@@ -32,10 +32,10 @@ const OurTeam = () => {
       designation: 'Associate Member',
       experience: '10+ Years Experience',
       specialization: 'LLB, Patna High Court',
-      image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/arjunmehta',
-      twitter: 'https://twitter.com/arjunmehta',
-      email: 'arjun@rplegalassociates.com',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+      email: 'sachin@rplegalassociates.com',
       bio: 'Sachin Kumar is a dedicated advocate with extensive experience in criminal defense and Civil Defense. His strong courtroom presence and thorough case preparation have resulted in numerous successful outcomes for our clients.'
     },
     {
@@ -43,10 +43,10 @@ const OurTeam = () => {
       designation: 'Associate',
       experience: '5+ Years Experience',
       specialization: 'Advocate',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0fa47d3641a?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/kavitasingh',
-      twitter: 'https://twitter.com/kavitasingh',
-      email: 'kavita@rplegalassociates.com',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+      email: 'binod@rplegalassociates.com',
       bio: 'Binod Pandit specializes in family law matters and alternative dispute resolution. His compassionate approach and skilled negotiation abilities make him particularly effective in sensitive family and matrimonial cases.'
     },
     {
@@ -54,10 +54,10 @@ const OurTeam = () => {
       designation: 'Associate',
       experience: '5+ Years Experience',
       specialization: 'Jharkhand High Court',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/rohitkumar',
-      twitter: 'https://twitter.com/rohitkumar',
-      email: 'rohit@rplegalassociates.com',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+      email: 'saurabh@rplegalassociates.com',
       bio: 'Saurabh Xess brings expertise in corporate law and property matters to our team. His attention to detail and comprehensive understanding of business law make him an asset in complex commercial transactions.'
     },
     {
@@ -65,10 +65,10 @@ const OurTeam = () => {
       designation: 'Executive Manager',
       experience: '7+ Years Experience',
       specialization: 'MBA & CA',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
-      linkedin: 'https://linkedin.com/in/nehaagarwal',
-      twitter: 'https://twitter.com/nehaagarwal',
-      email: 'neha@rplegalassociates.com',
+      image: 'https://rplegal.netlify.app/lawyer_avatar.png',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+      email: 'krishna@rplegalassociates.com',
       bio: 'Krishna Mohan Pandey is not only an experienced accountant but a very able organiser and propagator of ideas for team at RP Legal Assosiates. He often collaborates with advocates to give our clients a satisfactory outcome.'
     }
   ];
