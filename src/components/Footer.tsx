@@ -39,9 +39,9 @@ const Footer = () => {
               </div>
               
               <p className="text-primary-foreground/90 leading-relaxed mb-6 max-w-md">
-                With over 25 years of expertise, we provide exceptional legal services across diverse 
+                With over 15 years of expertise, we provide exceptional legal services across diverse 
                 practice areas. Our commitment to excellence and client satisfaction has made us one 
-                of India's most trusted law firms.
+                of East India's most trusted law firms.
               </p>
 
               <div className="space-y-3">
