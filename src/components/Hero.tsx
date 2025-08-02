@@ -20,13 +20,17 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="hero" size="lg" className="group">
-                Get Legal Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Explore Our Services
-              </Button>
+              <a href="#contact">
+                <Button variant="hero" size="lg" className="group">
+                  Get Legal Consultation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#services">
+                <Button variant="outline" size="lg">
+                  Explore Our Services
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

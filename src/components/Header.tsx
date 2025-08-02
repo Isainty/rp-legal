@@ -33,13 +33,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-lg overflow-hidden">
-              <img 
-                src="/src/assets/rp-logo.png" 
-                alt="RP Legal Associates" 
-                className="w-full h-full object-contain filter brightness-0 invert"
-                style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(1649%) hue-rotate(211deg) brightness(94%) contrast(93%)' }}
-              />
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-primary/10 flex items-center justify-center">
+              <Scale className="w-6 h-6 text-primary" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">RP Legal Associates</h1>
@@ -78,17 +73,19 @@ const Header = () => {
               <DropdownMenuContent className="w-56">
                 {services.map((service) => (
                   <DropdownMenuItem key={service.name} asChild>
-                    <Link to={service.href} className="cursor-pointer">
-                      {service.name}
-                    </Link>
+                     <Link to={service.href} className="cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+                       {service.name}
+                     </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <Button variant="hero" size="sm" className="ml-4">
-              Get Consultation
-            </Button>
+            <a href="#contact">
+              <Button variant="hero" size="sm" className="ml-4">
+                Get Consultation
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -132,15 +129,20 @@ const Header = () => {
                     key={service.name}
                     to={service.href}
                     className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setTimeout(() => window.scrollTo(0, 0), 100);
+                    }}
                   >
                     {service.name}
                   </Link>
                 ))}
               </div>
-              <Button variant="hero" size="sm" className="w-full mt-4">
-                Get Consultation
-              </Button>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="hero" size="sm" className="w-full mt-4">
+                  Get Consultation
+                </Button>
+              </a>
             </nav>
           </div>
         )}

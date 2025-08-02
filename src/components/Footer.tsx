@@ -1,6 +1,7 @@
 import React from 'react';
 import { Scale, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const services = [
@@ -14,9 +15,9 @@ const Footer = () => {
   const quickLinks = [
     { name: 'About Us', href: '#about' },
     { name: 'Our Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' }
+    { name: 'Gallery', href: '#about' },
+    { name: 'Our Team', href: '/our-team' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -81,17 +82,27 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a 
-                      href={link.href} 
-                      className="text-primary-foreground/80 hover:text-secondary transition-colors duration-300 flex items-center group"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
+                 {quickLinks.map((link, index) => (
+                   <li key={index}>
+                     {link.href.startsWith('/') ? (
+                       <Link 
+                         to={link.href} 
+                         className="text-primary-foreground/80 hover:text-secondary transition-colors duration-300 flex items-center group"
+                       >
+                         <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                         {link.name}
+                       </Link>
+                     ) : (
+                       <a 
+                         href={link.href} 
+                         className="text-primary-foreground/80 hover:text-secondary transition-colors duration-300 flex items-center group"
+                       >
+                         <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                         {link.name}
+                       </a>
+                     )}
+                   </li>
+                 ))}
               </ul>
 
               <div className="mt-8">
