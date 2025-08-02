@@ -15,8 +15,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              With over 25 years of expertise, we provide exceptional legal services across diverse practice areas. 
-              Our commitment to excellence and client satisfaction has made us one of India's most trusted law firms.
+              With over 15 years of expertise, we provide exceptional legal services across diverse practice areas. 
+              Our commitment to excellence and client satisfaction has made us one of East India's most trusted law firms.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
