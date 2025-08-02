@@ -8,7 +8,7 @@ const OurTeam = () => {
     {
       name: 'Mr. Ratan Prasad',
       designation: 'Founder & Senior Associate',
-      experience: '12+ Years Experience,
+      experience: '12+ Years Experience',
       specialization: 'Member of ILI New Delhi',
       image: 'https://rplegal.netlify.app/lawyer_avatar.png',
       linkedin: 'https://linkedin.com/',
