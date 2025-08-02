@@ -6,70 +6,70 @@ import { Link } from 'react-router-dom';
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: 'Rajesh Patel',
-      designation: 'Senior Partner & Founder',
-      experience: '25+ Years Experience',
-      specialization: 'Corporate Law, M&A, Securities Law',
+      name: 'Mr. Ratan Prasad',
+      designation: 'Founder & Senior Associate',
+      experience: '12+ Years Experience,
+      specialization: 'Member of ILI New Delhi',
       image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/rajeshpatel',
       twitter: 'https://twitter.com/rajeshpatel',
       email: 'rajesh@rplegalassociates.com',
-      bio: 'Rajesh has over 25 years of experience in corporate law and has advised numerous Fortune 500 companies on complex transactions and regulatory matters.'
+      bio: 'As the visionary founder of RP Legal Associates, Mr. Ratan Prasad has built the firm from the ground up since 2012. His extensive experience and strategic leadership have been instrumental in establishing our reputation as a trusted legal partner across India.'
     },
     {
-      name: 'Priya Sharma',
-      designation: 'Partner',
-      experience: '18+ Years Experience',
-      specialization: 'Family Law, Civil Disputes, Women Rights',
+      name: 'Mr. Ranjit Prasad',
+      designation: 'Founder & Associate',
+      experience: '7+ Years Experience',
+      specialization: 'Member AWFTC of High Court, Ranchi',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/priyasharma',
       twitter: 'https://twitter.com/priyasharma',
       email: 'priya@rplegalassociates.com',
-      bio: 'Priya is renowned for her expertise in family law and has successfully handled over 500 cases with a focus on protecting women\'s rights.'
+      bio: 'With his unique combination of legal and technical expertise, Mr. Ranjit Prasad brings invaluable insights to complex cases involving technology, intellectual property, and corporate matters. His diverse educational background enables comprehensive legal solutions.'
     },
     {
-      name: 'Arjun Mehta',
-      designation: 'Senior Associate',
-      experience: '12+ Years Experience',
-      specialization: 'Criminal Defense, Constitutional Law',
+      name: 'Sachin Kumar',
+      designation: 'Associate Member',
+      experience: '10+ Years Experience',
+      specialization: 'LLB, Patna High Court',
       image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/arjunmehta',
       twitter: 'https://twitter.com/arjunmehta',
       email: 'arjun@rplegalassociates.com',
-      bio: 'Arjun specializes in criminal defense and constitutional law with a track record of winning complex high-profile cases.'
+      bio: 'Sachin Kumar is a dedicated advocate with extensive experience in criminal defense and Civil Defense. His strong courtroom presence and thorough case preparation have resulted in numerous successful outcomes for our clients.'
     },
     {
-      name: 'Kavita Singh',
+      name: 'Binod Pandit',
       designation: 'Associate',
-      experience: '8+ Years Experience',
-      specialization: 'Real Estate, Property Law, Banking',
+      experience: '5+ Years Experience',
+      specialization: 'Advocate',
       image: 'https://images.unsplash.com/photo-1594736797933-d0fa47d3641a?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/kavitasingh',
       twitter: 'https://twitter.com/kavitasingh',
       email: 'kavita@rplegalassociates.com',
-      bio: 'Kavita has extensive experience in real estate transactions and banking law, having advised on property deals worth over ₹1000 crores.'
+      bio: 'Binod Pandit specializes in family law matters and alternative dispute resolution. His compassionate approach and skilled negotiation abilities make him particularly effective in sensitive family and matrimonial cases.'
     },
     {
-      name: 'Rohit Kumar',
-      designation: 'Junior Associate',
+      name: 'Saurabh Xess',
+      designation: 'Associate',
       experience: '5+ Years Experience',
-      specialization: 'Contract Law, Intellectual Property',
+      specialization: 'Jharkhand High Court',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/rohitkumar',
       twitter: 'https://twitter.com/rohitkumar',
       email: 'rohit@rplegalassociates.com',
-      bio: 'Rohit focuses on contract law and intellectual property matters, helping startups and established businesses protect their innovations.'
+      bio: 'Saurabh Xess brings expertise in corporate law and property matters to our team. His attention to detail and comprehensive understanding of business law make him an asset in complex commercial transactions.'
     },
     {
-      name: 'Neha Agarwal',
-      designation: 'Junior Associate',
-      experience: '4+ Years Experience',
-      specialization: 'Employment Law, Labor Disputes',
+      name: 'Krishna Mohan Pandey',
+      designation: 'Executive Manager',
+      experience: '7+ Years Experience',
+      specialization: 'MBA & CA',
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
       linkedin: 'https://linkedin.com/in/nehaagarwal',
       twitter: 'https://twitter.com/nehaagarwal',
       email: 'neha@rplegalassociates.com',
-      bio: 'Neha specializes in employment law and has successfully resolved numerous labor disputes for both employers and employees.'
+      bio: 'Krishna Mohan Pandey is not only an experienced accountant but a very able organiser and propagator of ideas for team at RP Legal Assosiates. He often collaborates with advocates to give our clients a satisfactory outcome.'
     }
   ];
 
